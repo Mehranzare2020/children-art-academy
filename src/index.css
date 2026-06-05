@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=Fredoka:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fredoka", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fdfaf6; /* Very gentle warm cream */
+  color: #334155;
+}
+
+/* Custom funny animations for childrens website */
+@keyframes cuteBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes cuteWiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.cute-bounce-active:hover {
+  animation: cuteBounce 1s infinite ease-in-out;
+}
+
+.cute-wiggle {
+  animation: cuteWiggle 3s infinite ease-in-out;
+}
+
+/* Rounded gorgeous panels scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
